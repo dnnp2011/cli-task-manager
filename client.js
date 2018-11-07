@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 const client = new EventEmitter();
 const server = require('./server')(client);
 server.on('response', response => {
-    getCliPrompt(response);
+    writeCliPrompt(response);
 });
 
 rl.on('line', input => {
